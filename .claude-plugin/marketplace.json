@@ -1,0 +1,15 @@
+{
+  "name": "polyvia-skills",
+  "owner": {
+    "name": "Polyvia AI",
+    "url": "https://polyvia.ai"
+  },
+  "plugins": [
+    {
+      "name": "polyvia",
+      "description": "Polyvia AI — ingest documents, query your knowledge base, and manage document groups. Connects Claude Code to the Polyvia MCP server so you can ingest, search, and query documents without leaving your editor.",
+      "source": "./",
+      "homepage": "https://github.com/polyvia-ai/skills"
+    }
+  ]
+}

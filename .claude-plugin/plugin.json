@@ -1,0 +1,22 @@
+{
+  "name": "polyvia",
+  "description": "Polyvia AI — ingest documents, query your knowledge base, and manage document groups. Connects Claude Code to the Polyvia MCP server so you can ingest, search, and query documents without leaving your editor.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Polyvia AI",
+    "url": "https://polyvia.ai"
+  },
+  "homepage": "https://github.com/polyvia-ai/skills",
+  "repository": "https://github.com/polyvia-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "polyvia",
+    "documents",
+    "rag",
+    "mcp",
+    "knowledge-base",
+    "ai"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

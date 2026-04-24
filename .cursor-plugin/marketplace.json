@@ -1,0 +1,16 @@
+{
+  "name": "polyvia-skills",
+  "owner": {
+    "name": "Polyvia AI"
+  },
+  "metadata": {
+    "description": "Polyvia AI — ingest documents, query your knowledge base, and manage document groups. Connects Cursor to the Polyvia MCP server so you can ingest, search, and query documents without leaving your editor."
+  },
+  "plugins": [
+    {
+      "name": "polyvia",
+      "description": "Polyvia AI — ingest documents, query your knowledge base, and manage document groups. Connects Cursor to the Polyvia MCP server so you can ingest, search, and query documents without leaving your editor.",
+      "source": "./"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@polyvia-ai/skills",
+  "version": "0.1.0",
+  "description": "Agent skills for the Polyvia AI platform",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polyvia-ai/skills"
+  },
+  "homepage": "https://github.com/polyvia-ai/skills",
+  "keywords": [
+    "polyvia",
+    "skills",
+    "agent-skills",
+    "mcp",
+    "documents",
+    "rag",
+    "ai"
+  ]
+}
