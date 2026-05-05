@@ -19,7 +19,7 @@ allowed-tools: "Bash Read Write"
 
 The Polyvia MCP server is hosted at `https://app.polyvia.ai/mcp` (streamable HTTP transport). Connect once and any MCP-compatible AI client can ingest, search, and query documents without any code.
 
-Requires a `poly_...` API key from **app.polyvia.ai → Settings → API**.
+Requires a `poly_...` API key from **app.polyvia.ai → Settings → API**. Each key is permanently bound to the workspace (personal or one organization) you were in when you created it — the MCP server reads/writes only that workspace. Switch workspace and create a separate key if you need to operate on more than one.
 
 ---
 

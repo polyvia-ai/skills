@@ -17,7 +17,7 @@ allowed-tools: "Bash Read Write"
 
 # Polyvia Skill
 
-Polyvia is a multimodal retrieval platform for AI agents. You can ingest documents (PDF, DOCX, PPTX, XLSX, TXT, etc.), wait for them to be parsed and indexed, then query them with natural language — scoped to a single document, a group, or the entire workspace.
+Polyvia is a multimodal retrieval platform for AI agents. You can ingest documents (`.pdf`, `.docx`, `.pptx`, `.txt`, `.md`), images (`.png`, `.jpg`, `.webp`, `.gif`), and audio (`.wav`, `.mp3`, `.m4a`), wait for them to be parsed and indexed, then query them with natural language — scoped to a single document, a group, or the entire workspace.
 
 ## Setup
 
