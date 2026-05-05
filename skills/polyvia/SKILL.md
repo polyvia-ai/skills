@@ -115,8 +115,10 @@ client.documents.delete("doc_...")
 usage  = client.usage()
 limits = client.rate_limits()
 
-print(usage.usage.requests.period)         # requests this month
-print(usage.usage.documents_stored)        # live document count
+print(usage.usage.requests.period)            # API requests this month (per key)
+print(usage.usage.pages.period)               # pages processed this month (workspace)
+print(usage.usage.audio_seconds.period / 60)  # minutes of audio this month
+print(usage.usage.documents_stored)           # live document count
 print(limits.current["remaining_this_minute"])
 ```
 

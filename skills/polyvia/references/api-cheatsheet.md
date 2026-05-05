@@ -39,7 +39,7 @@ Auth: `Authorization: Bearer poly_<key>`
 
 | Method | Endpoint | Returns |
 |--------|----------|---------|
-| GET | `/api/v1/usage` | Request / ingest / query counts (period + total), documents stored |
+| GET | `/api/v1/usage` | Per-key counters (`requests`, `ingests`, `queries`) + per-workspace totals (`pages`, `audio_seconds`, `documents_stored`) — each as `{period, total}` |
 | GET | `/api/v1/rate-limits` | Plan limits, remaining capacity, reset timestamps |
 
 ## Python SDK Quick Reference
