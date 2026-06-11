@@ -23,6 +23,19 @@ Requires a `poly_...` API key from **app.polyvia.ai → Settings → API**. Each
 
 ---
 
+## Claude Code
+
+Add the server with one command:
+
+```bash
+claude mcp add --transport http polyvia https://app.polyvia.ai/mcp \
+  --header "Authorization: Bearer poly_<your-key>"
+```
+
+`--scope user` makes it available in every project; run `claude mcp list` to confirm it's connected.
+
+---
+
 ## Claude Desktop
 
 Add to `~/.claude/claude_desktop_config.json`:
