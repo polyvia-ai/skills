@@ -25,7 +25,7 @@ npx skills add polyvia-ai/skills@polyvia-mcp
 
 > Set `POLYVIA_API_KEY=poly_...` in your environment before installing so the
 > MCP server connects automatically. Get a key at
-> [app.polyvia.ai → Settings → API](https://app.polyvia.ai/settings).
+> [app.polyvia.ai → API](https://app.polyvia.ai/api-keys).
 
 ---
 

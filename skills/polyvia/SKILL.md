@@ -28,7 +28,7 @@ pip install polyvia
 export POLYVIA_API_KEY=poly_...   # or pass api_key= explicitly
 ```
 
-Get an API key at **app.polyvia.ai → Settings → API**.
+Get an API key at **app.polyvia.ai → API** (in the sidebar).
 
 ---
 
@@ -54,7 +54,7 @@ print(answer.answer)
 batch = client.ingest.batch(
     ["q3.pdf", "q4.pdf"],
     names=["Q3 Report", "Q4 Report"],
-    group_id="g_...",   # optional — assign to a group on upload
+    group="Finance",   # optional — group name (created if it doesn't exist yet)
 )
 for item in batch:
     client.ingest.wait(item.task_id)
@@ -70,8 +70,8 @@ print(answer.answer)
 ### Query scoped to a group
 
 ```python
-answer = client.query("Compare the key findings.", group_id="g_finance")
-# or multiple groups:
+answer = client.query("Compare the key findings.", group="Finance")
+# or multiple groups (by id):
 answer = client.query("Compare Q3 vs Q4.", group_ids=["g_q3", "g_q4"])
 ```
 
@@ -80,15 +80,17 @@ answer = client.query("Compare Q3 vs Q4.", group_ids=["g_q3", "g_q4"])
 ## Groups
 
 ```python
-# Create
-group_id = client.groups.create("Finance")["group_id"]
+# Groups have a human name + an opaque backend id. Pass the name straight to
+# ingest/query (above); use get_or_create when you want the Group object/id.
+group = client.groups.get_or_create("Finance")   # idempotent — never duplicates
+group.id, group.name
 
 # List
 for g in client.groups.list():
     print(g.id, g.name)
 
 # Delete (documents first, then group)
-client.groups.delete(group_id, delete_documents=True)
+client.groups.delete(group.id, delete_documents=True)
 ```
 
 ---

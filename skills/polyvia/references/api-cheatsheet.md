@@ -48,14 +48,14 @@ Auth: `Authorization: Bearer poly_<key>`
 from polyvia import Polyvia, AsyncPolyvia
 client = Polyvia()  # POLYVIA_API_KEY env var
 
-# Ingest
-client.ingest.file(path, name=None, group_id=None)       # → IngestResult
-client.ingest.batch(paths, names=None, group_id=None)    # → list[BatchIngestItem]
+# Ingest  (group= takes a group NAME, created if missing; group_id= is the raw id)
+client.ingest.file(path, name=None, group=None, group_id=None)     # → IngestResult
+client.ingest.batch(paths, names=None, group=None, group_id=None)  # → list[BatchIngestItem]
 client.ingest.status(task_id)                             # → IngestionStatus
 client.ingest.wait(task_id, poll_interval=5, timeout=300)
 
-# Query
-client.query(q, document_id=None, group_id=None, group_ids=None)  # → QueryResult
+# Query  (group= = name, must already exist; group_ids= = list of ids)
+client.query(q, document_id=None, group=None, group_id=None, group_ids=None)  # → QueryResult
 
 # Documents
 client.documents.list(status=None, group_id=None, group_ids=None)
@@ -65,7 +65,9 @@ client.documents.delete(document_id)
 
 # Groups
 client.groups.list()
-client.groups.create(name)                        # → {"group_id": "..."}
+client.groups.get_or_create(name)                 # → Group  (idempotent; prefer this)
+client.groups.find(name)                          # → Group | None
+client.groups.create(name)                        # → {"group_id": "..."}  (always new)
 client.groups.delete(group_id, delete_documents=False)
 client.groups.delete_documents(group_id)
 
